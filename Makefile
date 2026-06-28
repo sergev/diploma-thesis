@@ -8,6 +8,13 @@ SRC     = common.me th.me apply.me aout.man pict.me arh.man ld.man\
 		as.man emu.man syntax.me boot.me intro.me as.me emu.me\
 		concl.me refer.me
 
+# Typst build (modern rewrite — see book.typ and doc/TODO.md)
+book.pdf: book.typ $(wildcard *.typ)
+	typst compile book.typ
+
+book-watch:
+	typst watch book.typ
+
 th.lp:  $(SRC)
 
 th.hp:  $(SRC)
@@ -54,7 +61,7 @@ newdict: newspell
 	spellin <SPELL >DICT
 
 clean:
-	-rm -f *.lp *.hp *.hpr *.b pict.me
+	-rm -f *.lp *.hp *.hpr *.b pict.me book.pdf
 
 spell SPELL:  *.me *.man *.tbl *.nr
 	spell -d DICT *.me *.man *.tbl *.nr >SPELL
