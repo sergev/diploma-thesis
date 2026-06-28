@@ -1,0 +1,54 @@
+.tr @"
+.m1 0
+.m2 0
+.m3 2v
+.m4 0
+.nr ii 0.5i
+.fo ''-%-''
+.ct
+.de CT                  \" add content line
+.if "\\*(oG"+" \
+.       cT "\\$1"
+..
+.de -
+.ip - 3n
+..
+.de =
+.ip = 3n
+..
+.de AP
+.br
+.nr _0 \\n(.iu
+.nr _1 \\n(.lu
+.ll \\n(_Lu-5n
+.da O[
+.sp 1
+.$Y 4n
+.ce 1
+Приложения
+.sp 1
+.br
+.di
+.ll \\n(_1u
+.in \\n(_0u
+.re
+.rr _0
+.rr _1
+..
+.de cT
+.br
+.nr _0 \\n(.iu
+.nr _1 \\n(.lu
+.ll \\n(_Lu-5n
+.da O[
+.$Y 4n
+.ti 0
+\&\t\\$1\ \\a\\t\\n%
+.br
+.di
+.ll \\n(_1u
+.in \\n(_0u
+.re
+.rr _0
+.rr _1
+..
