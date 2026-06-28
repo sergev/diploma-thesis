@@ -1,49 +1,65 @@
-// TODO Task 2: replace this placeholder with the real Soviet title page
-// converted from title.nr (institutes, author, bold title, advisors, Москва 1989).
-#import "@preview/bookly:0.1.0": *
+// Soviet diploma title page, faithfully reproduced from the original troff
+// source (title.nr). Plain academic layout: centered institutes at the top,
+// author and bold title in the upper middle, advisors lower, «Москва 1989» at
+// the bottom. No header/footer bars or decorative rules.
 
-#let thesis-title-page = context {
-  let primary = states.colors.get().primary
-
-  let header = box(fill: primary, width: 100%, inset: 1em)[
-    #set align(center + horizon)
-    #text(fill: white, size: 1.5em)[*MLA Assembly Programming*]
-  ]
-
-  let footer = box(fill: primary, width: 100%, inset: 1em)[
-    #set align(center + horizon)
-    #text(fill: white, size: 1.5em)[*Serge Vakulenko*]
-  ]
-
+#let thesis-title-page = {
   set page(
     paper: "a4",
-    header: header,
-    footer: footer,
-    margin: (left: 0em, right: 0em, top: 6em, bottom: 6em),
+    header: none,
+    footer: none,
+    margin: (x: 2.5cm, top: 2.5cm, bottom: 2cm),
   )
 
-  align(horizon)[
-    #move(dx: 2em)[
-      #line(stroke: 1.5pt + primary, length: 90%)
-      #v(1em)
+  // Institutes (centered, at the top).
+  align(center)[
+    Московский ордена Трудового Красного Знамени \
+    физико-технический институт \
+    Ордена Ленина и ордена Октябрьской Революции \
+    институт атомной энергии им. И. В. Курчатова \
+    Ордена Ленина институт прикладной математики \
+    Академии наук СССР
+  ]
+
+  v(1fr)
+
+  // Author, title and kind of work (centered, upper middle).
+  align(center)[
+    Вакуленко С. В.
+
+    #v(1em)
+    #text(weight: "bold")[
+      Разработка переносимой Си-ориентированной \
+      инструментальной системы программирования \
+      для ЭВМ Эльбрус-Б.
     ]
-    #move(dx: 4em)[
-      #text(size: 3em)[*#states.title.get()*]
+
+    #v(1em)
+    Дипломная работа.
+  ]
+
+  v(1fr)
+
+  // Scientific advisors: label flush-left, names indented (mimics .in 2.5i / .ti -2.5i).
+  block(width: 100%)[
+    Научные руководители:
+    #pad(left: 2.5in)[
+      Платонов Александр Константинович, \
+      доктор физико-математических наук, \
+      ИПМ АН СССР
+
       #v(0.5em)
-      #text(size: 2em)[Assembly Programming]
-      #v(1em)
-      #text(size: 1.5em)[Edition 0.1]
-      // #text(size: 1.5em)[#states.author.get()]
-    ]
-    #move(dx: 2em)[
-      #v(1em)
-      #line(stroke: 1.5pt + primary, length: 90%)
+      Пасынков Игорь Григорьевич, \
+      кандидат физико-математических наук, \
+      ИАЭ им. И. В. Курчатова
     ]
   ]
 
-  place(bottom + left, dx: 2em, dy: -2em)[
-    #text(size: 0.85em)[
-      #sym.copyright 1989 Serge Vakulenko
-    ]
+  v(1fr)
+
+  // City and year, at the bottom.
+  align(center)[
+    Москва \
+    1989
   ]
 }

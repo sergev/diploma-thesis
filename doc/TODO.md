@@ -47,9 +47,12 @@ changes. After each task, `typst compile book.typ` must succeed.
   auto-downloads). _Done: `book.typ` + placeholder `title-page.typ`, font = New Computer
   Modern (body) / DejaVu Sans Mono (code), `lang: ru`, A4; Typst targets added to
   `Makefile`; `book.pdf` gitignored. Compiles clean; Cyrillic verified in render._
-- [ ] **2. Russian title page** — convert `title.nr` → `title-page.typ`: the three
+- [x] **2. Russian title page** — convert `title.nr` → `title-page.typ`: the three
   institutes, author "Вакуленко С. В.", bold three-line title, hanging-indent advisor
-  block, "Москва / 1989". Wire it as the bookly `title-page`.
+  block, "Москва / 1989". Wire it as the bookly `title-page`. _Done: faithful Soviet
+  title page (no header/footer bars or rules), `1fr` spacers distribute the four blocks
+  down one A4 page; advisor names indented 2.5in via `#pad`. Renders clean; body
+  unaffected._
 - [ ] **3. BESM-6 syntax highlighting** — write `besm6.syntax` + `besm6.theme`
   (replacing the MLC files); register via `#set raw(...)`; pick the ```` ```asm ````
   tag; keep native `c` highlighting for the struct listings.
