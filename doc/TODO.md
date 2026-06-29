@@ -102,7 +102,11 @@ changes. After each task, `typst compile book.typ` must succeed.
   comments intact), synopsis as inline raw, `.IP` → term lists, prose underscores escaped
   `\_` (n_value/a_flag/N_COMM…), troff backtick-quotes → inline-raw `-s` / guillemets.
   Each man file imports `man.typ`. Renders correctly, no overflow._
-- [ ] **12.** `ld.man` + `ar.man` + `nm.man`.
+- [x] **12.** `arh.man` + `ld.man` + `ar.man` + `nm.man`. _Done: `arh` folded in (was
+  omitted from the groupings) so appendix order matches apply.me. arh has a `struct ar_hdr`
+  ```c block; ld/ar/nm are flag/key term lists. Escaping: prose underscores `\_`
+  (`_econst…`, `ar_date`), `*` in file-path keys (`/lib/lib\*.a`, `/tmp/v\*`); quotes →
+  guillemets. All render correctly with indented sections._
 - [ ] **13.** `lorder.man` + `size.man` + `strip.man` + `show.man` + `as.man` +
   `emu.man`.
 - [ ] **14.** `syntax.me` → formal grammar appendix (no-fill / no-hyphenation rules →
