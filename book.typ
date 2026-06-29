@@ -48,3 +48,6 @@
 #include "concl.typ"
 #include "refer.typ"
 #include "apply.typ"
+
+// Advisor's review (отзыв) — standalone final page.
+#include "review.typ"
