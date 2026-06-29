@@ -3,9 +3,8 @@
 #import "@preview/bookly:0.1.0": *
 #import "title-page.typ": thesis-title-page
 
-// TODO Task 3: custom BESM-6 assembler highlighting
-// #set raw(syntaxes: "besm6.syntax", theme: "besm6.theme")
-
+// Code listings use Typst's built-in `c` highlighting (the thesis has no
+// assembler listings — only C struct definitions in the a.out/ar appendices).
 // Russian body text in New Computer Modern; code in a Cyrillic-capable mono.
 #set text(lang: "ru", font: "New Computer Modern")
 #show raw: set text(font: "DejaVu Sans Mono")

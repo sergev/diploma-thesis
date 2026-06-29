@@ -53,9 +53,12 @@ changes. After each task, `typst compile book.typ` must succeed.
   title page (no header/footer bars or rules), `1fr` spacers distribute the four blocks
   down one A4 page; advisor names indented 2.5in via `#pad`. Renders clean; body
   unaffected._
-- [ ] **3. BESM-6 syntax highlighting** — write `besm6.syntax` + `besm6.theme`
-  (replacing the MLC files); register via `#set raw(...)`; pick the ```` ```asm ````
-  tag; keep native `c` highlighting for the struct listings.
+- [x] **3. Code highlighting** — _Finding: the thesis has no assembler listings (only C
+  struct listings in aout/arh; `as.me` is prose). Per decision, dropped the custom
+  `besm6.syntax`/`besm6.theme` idea and use Typst's built-in `c` highlighting with its
+  default light theme. Removed the dead `#set raw(...)` placeholder from `book.typ`;
+  mono = DejaVu Sans Mono. Verified on a real `struct exec` listing with Russian
+  comments — highlighted, clean, no tofu._
 
 ## Phase B — Body chapters (th.me order)
 - [ ] **4.** `results.me` + `intro.me` → `results.typ`, `intro.typ`.
