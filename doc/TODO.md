@@ -107,8 +107,12 @@ changes. After each task, `typst compile book.typ` must succeed.
   ```c block; ld/ar/nm are flag/key term lists. Escaping: prose underscores `\_`
   (`_econst…`, `ar_date`), `*` in file-path keys (`/lib/lib\*.a`, `/tmp/v\*`); quotes →
   guillemets. All render correctly with indented sections._
-- [ ] **13.** `lorder.man` + `size.man` + `strip.man` + `show.man` + `as.man` +
-  `emu.man`.
+- [x] **13.** `lorder.man` + `size.man` + `strip.man` + `show.man` + `as.man` +
+  `emu.man`. _Done: as.man/emu.man named `as-man.typ`/`emu-man.typ` (the as/emu chapter
+  files already own `as.typ`/`emu.typ`). lorder's shell example → code block (backticks/
+  `*`/`|` literal); emu's ~14 debugger keys escape `<`→`\<` `>`→`\>`; strip's `/tmp/s??????`
+  literal; show's multiple letter term-lists. All render correctly. **All 11 man pages
+  done.**_
 - [ ] **14.** `syntax.me` → formal grammar appendix (no-fill / no-hyphenation rules →
   raw or tight blocks).
 - [ ] **15.** `pict.tbl` → Typst `#table()`s (object-file & archive structure diagrams +
