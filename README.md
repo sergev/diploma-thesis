@@ -8,7 +8,7 @@ Technology) diploma thesis by **S. V. Vakulenko**:
 > Elbrus-B computer."
 
 The thesis is written in Russian. It was originally typeset with troff/nroff and has been
-converted to [Typst](https://typst.app) (see `book.typ`). This README summarizes its
+converted to [Typst](https://typst.app) (see `thesis.typ`). This README summarizes its
 content in English.
 
 ## Background
@@ -73,7 +73,7 @@ each program. The document was converted from its original troff/`-me` form to T
 
 | Files | Role |
 |-------|------|
-| `book.typ` | Master document — template setup, table of contents, and the `#include` order |
+| `thesis.typ` | Master document — template setup, table of contents, and the `#include` order |
 | `title-page.typ` | The Soviet title page |
 | `results.typ` … `refer.typ` | The nine thesis chapters (Russian) |
 | `apply.typ` + tool `*.typ` | «Приложения»: man pages for `ld`, `ar`, `as`, `emu`, …, via the `man.typ` helper |
@@ -86,7 +86,7 @@ each program. The document was converted from its original troff/`-me` form to T
 Typeset with [Typst](https://typst.app):
 
 ```sh
-make          # typst compile book.typ -> book.pdf
+make          # typst compile thesis.typ -> thesis.pdf
 make watch    # live preview
 ```
 

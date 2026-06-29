@@ -1,12 +1,12 @@
 TYPST   = typst
 
-book.pdf: $(wildcard *.typ)
-	$(TYPST) compile book.typ
+thesis.pdf: $(wildcard *.typ)
+	$(TYPST) compile thesis.typ
 
 watch:
-	$(TYPST) watch book.typ
+	$(TYPST) watch thesis.typ
 
 clean:
-	rm -f book.pdf
+	rm -f thesis.pdf
 
 .PHONY: watch clean

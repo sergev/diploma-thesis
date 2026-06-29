@@ -19,9 +19,9 @@ emu, …) lives elsewhere — here those names appear only as man-page-style app
 
 Typeset with [Typst](https://typst.app):
 
-- `make` (or `make book.pdf`) → `typst compile book.typ` → `book.pdf`.
-- `make watch` → `typst watch book.typ` for live preview.
-- `make clean` removes `book.pdf` (which is git-ignored).
+- `make` (or `make thesis.pdf`) → `typst compile thesis.typ`.
+- `make watch` → `typst watch thesis.typ` for live preview.
+- `make clean` removes `thesis.pdf` (which is git-ignored).
 
 Requirements: the `typst` CLI. The document uses the `@preview/bookly` template
 (auto-downloaded on first compile) and the fonts **New Computer Modern** (body; covers
@@ -30,7 +30,7 @@ them).
 
 ## Document structure
 
-`book.typ` is the master file: it configures bookly (Russian `lang`, A4, the title page),
+`thesis.typ` is the master file: it configures bookly (Russian `lang`, A4, the title page),
 emits the «Содержание» table of contents, and `#include`s the content in order.
 
 - **Title page** — `title-page.typ` (the Soviet title page, from the original `title.nr`).
@@ -48,7 +48,7 @@ emits the «Содержание» table of contents, and `#include`s the conten
 - All prose is Russian and UTF-8; preserve the text verbatim (including original typos
   unless explicitly asked to fix them).
 - Chapter and appendix files contain plain Typst markup and are `#include`d from
-  `book.typ` / `apply.typ`. Files that use the man-page helpers or explicit headings start
+  `thesis.typ` / `apply.typ`. Files that use the man-page helpers or explicit headings start
   with `#import "man.typ": *`.
 - `man.typ` provides the man-page helpers: `man-page(name, section)` (a tool-page title —
   unnumbered level-2 heading, own page, in the TOC) and `man-section(title)[body]` (a
