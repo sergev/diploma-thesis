@@ -23,9 +23,14 @@
 // Indent of a section body relative to its header (the original .SH did `.ba 0.5i`).
 #let man-indent = 5em
 
+// Color of the section headers (matches bookly's primary accent).
+#let man-section-color = rgb("#c1002a")
+
 // .SH title — bold run-in header (NOT a heading, so no number/TOC entry) followed by
 // the section body, indented under the header in the classic man-page style.
 #let man-section(title, body) = {
-  block(above: 1.1em, below: 0.55em, breakable: false)[#strong(title)]
+  block(above: 1.1em, below: 0.55em, breakable: false)[
+    #text(fill: man-section-color)[#strong(title)]
+  ]
   pad(left: man-indent)[#body]
 }
