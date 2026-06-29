@@ -82,8 +82,11 @@ changes. After each task, `typst compile book.typ` must succeed.
   display → `#pad` indented block. Escaping handled: `#`→`\#` (directive list), `*`→`\*`
   (`int *`, `char *`, «*&»). Heavy inline C-type italics. Clean compile validates
   escaping; all rendered correctly._
-- [ ] **9.** `concl.me` + `refer.me` → `concl.typ`, `refer.typ` (bibliography as a
-  numbered list).
+- [x] **9.** `concl.me` + `refer.me` → `concl.typ`, `refer.typ` (bibliography as a
+  numbered list). _Done: «Выводы» 4-item list with the `.(l` timings display nested in
+  item 4; «Литература» 7-item numbered bibliography — leading-`-` publisher lines joined
+  onto the preceding line so they stay inline (not parsed as sub-bullets). Renders
+  correctly. **Phase B complete.**_
 
 ## Phase C — Appendices
 - [ ] **10. Appendix scaffolding** — "Приложения" section divider (`.AP`) + a reusable
