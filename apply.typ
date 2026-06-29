@@ -9,3 +9,4 @@
 // Man pages and reference sections are included here, in apply.me order:
 //   aout, arh, ld, ar, nm, lorder, size, strip, show, as, emu  (Tasks 11–13)
 //   syntax (Task 14), pict tables (Task 15)
+#include "aout.typ"

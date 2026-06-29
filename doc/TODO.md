@@ -97,8 +97,11 @@ changes. After each task, `typst compile book.typ` must succeed.
   custom unnumbered over bookly's lettered `appendix` env (faithful). Verified with a
   throwaway DEMO(9) page (since removed): title/sections/term-list/synopsis-raw/code all
   render correctly. Wired into `book.typ`._
-- [ ] **11.** `aout.man` → appendix (large; dual BESM-6 / Эльбрус-Б C struct listings +
-  IP lists).
+- [x] **11.** `aout.man` → appendix (large; dual BESM-6 / Эльбрус-Б C struct listings +
+  IP lists). _Done: `aout.typ` via man helpers — two ```c blocks (tabs/#defines/Russian
+  comments intact), synopsis as inline raw, `.IP` → term lists, prose underscores escaped
+  `\_` (n_value/a_flag/N_COMM…), troff backtick-quotes → inline-raw `-s` / guillemets.
+  Each man file imports `man.typ`. Renders correctly, no overflow._
 - [ ] **12.** `ld.man` + `ar.man` + `nm.man`.
 - [ ] **13.** `lorder.man` + `size.man` + `strip.man` + `show.man` + `as.man` +
   `emu.man`.
