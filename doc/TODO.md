@@ -89,9 +89,14 @@ changes. After each task, `typst compile book.typ` must succeed.
   correctly. **Phase B complete.**_
 
 ## Phase C — Appendices
-- [ ] **10. Appendix scaffolding** — "Приложения" section divider (`.AP`) + a reusable
+- [x] **10. Appendix scaffolding** — "Приложения" section divider (`.AP`) + a reusable
   `man-page` helper reproducing `.SH/.IP/.ES/.EE` semantics (Cyrillic section headers,
-  term lists, code blocks) for use by all the tool pages.
+  term lists, code blocks) for use by all the tool pages. _Done: `man.typ`
+  (`man-page(name, section)`, `man-section(title)` + documented conventions) and
+  `apply.typ` (unnumbered «Приложения» region via `#set heading(numbering: none)`). Chose
+  custom unnumbered over bookly's lettered `appendix` env (faithful). Verified with a
+  throwaway DEMO(9) page (since removed): title/sections/term-list/synopsis-raw/code all
+  render correctly. Wired into `book.typ`._
 - [ ] **11.** `aout.man` → appendix (large; dual BESM-6 / Эльбрус-Б C struct listings +
   IP lists).
 - [ ] **12.** `ld.man` + `ar.man` + `nm.man`.
