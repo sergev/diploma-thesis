@@ -7,8 +7,9 @@ Technology) diploma thesis by **S. V. Vakulenko**:
 > для ЭВМ Эльбрус-Б* — "Design of a portable, C-oriented programming toolchain for the
 > Elbrus-B computer."
 
-The thesis itself is written in Russian and typeset with troff/nroff. This README
-summarizes its content in English.
+The thesis is written in Russian. It was originally typeset with troff/nroff and has been
+converted to [Typst](https://typst.app) (see `book.typ`). This README summarizes its
+content in English.
 
 ## Background
 
@@ -59,36 +60,36 @@ heuristics.
 
 ## Historical significance
 
-According to the advisor's review (`vak.me`), this was among the **first portable C
+According to the advisor's review (`review.typ`), this was among the **first portable C
 compiler implementations in the USSR**. The intermediate BESM-6 cross-system (1986–1987)
 enabled a full Version 7 UNIX port completed in autumn 1988, which in turn became the
 base toolchain for the industrial 64-bit Elbrus-B effort.
 
 ## Repository contents
 
-This repo contains only the **thesis document source** (troff/nroff with the `-me` macro
-package), not the toolchain's own source code. The tool names above appear here as
-man-page-style appendices documenting each program.
+This repo contains only the **thesis document source** (Typst), not the toolchain's own
+source code. The tool names above appear here as man-page-style appendices documenting
+each program. The document was converted from its original troff/`-me` form to Typst.
 
 | Files | Role |
 |-------|------|
-| `th.me` | Master document; `.so`-includes every chapter in order |
-| `*.me` | Thesis chapters and front matter (Russian, `-me` macros) |
-| `*.man` | Man-page appendices for individual tools (`ld`, `ar`, `as`, `emu`, …) |
-| `*.tbl` | `tbl` table source (e.g. `pict.tbl`, object-file layout diagrams) |
-| `*.nr` | Bare troff config: page geometry, title page, hyphenation |
-| `Makefile` | Original typesetting rules |
-| `CLAUDE.md` | Guidance for working with the document source |
+| `book.typ` | Master document — template setup, table of contents, and the `#include` order |
+| `title-page.typ` | The Soviet title page |
+| `results.typ` … `refer.typ` | The nine thesis chapters (Russian) |
+| `apply.typ` + tool `*.typ` | «Приложения»: man pages for `ld`, `ar`, `as`, `emu`, …, via the `man.typ` helper |
+| `syntax.typ`, `pict.typ` | Formal input-language grammar; object-file layout diagrams |
+| `review.typ` | The advisor's review (отзыв), final page |
+| `Makefile`, `CLAUDE.md` | Typst build rules; working guidance |
 
 ## Typesetting
 
-The original toolchain (`hroff`, a Cyrillic troff, and `hpflt`, an HP LaserJet filter) is
-no longer available. With standard tools, the whole thesis can be formatted from the
-master file:
+Typeset with [Typst](https://typst.app):
 
 ```sh
-groff -me -t th.me        # -t runs tbl for table sources
+make          # typst compile book.typ -> book.pdf
+make watch    # live preview
 ```
 
-See `CLAUDE.md` for details on the build, the document structure, and the custom macros
-defined in `common.me`.
+The document uses the `@preview/bookly` template (auto-downloaded on first compile) and
+the New Computer Modern / DejaVu Sans Mono fonts. See `CLAUDE.md` for the document
+structure and conventions.
