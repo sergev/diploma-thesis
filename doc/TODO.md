@@ -118,8 +118,12 @@ changes. After each task, `typst compile book.typ` must succeed.
   term list with monospace symbol keys; the ~62-production BNF as one monospace code block
   (every metacharacter / quoted terminal / `"\""` exact, source line breaks preserved → no
   overflow); the `.[` examples as code blocks; prose `"#"`→`"\#"`. Renders correctly._
-- [ ] **15.** `pict.tbl` → Typst `#table()`s (object-file & archive structure diagrams +
-  captions).
+- [x] **15.** `pict.tbl` → Typst `#table()`s (object-file & archive structure diagrams +
+  captions). _Done: `pict.typ` — «Рисунки.» TOC heading + 4 tables (verified against a
+  groff render of the original): two single-column boxed stacks (a.out / archive) and two
+  bit-field reloc-word diagrams (`columns: 7`/`9`, explicit hline/vline for the `box` +
+  `|`/`_`, colspan labels). Overrode bookly's coloured/bold header-row styling
+  (`fill: none` + a row-0 text reset). Matches the original. **Phase C complete.**_
 
 ## Phase D — Finish
 - [ ] **16. Assemble & verify** — set the `#include` order in `book.typ` to match

@@ -21,3 +21,4 @@
 #include "as-man.typ"
 #include "emu-man.typ"
 #include "syntax.typ"
+#include "pict.typ"
