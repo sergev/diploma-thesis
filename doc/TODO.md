@@ -65,7 +65,10 @@ changes. After each task, `typst compile book.typ` must succeed.
   (`*…*`), `.-` → bullet lists, tool names italic (`_nm_`…); wired into `book.typ` as
   `#include`s (replacing the `= Черновик` placeholder). Both chapters render correctly,
   Cyrillic crisp._
-- [ ] **5.** `boot.me` → `boot.typ` (numbered `.np` paragraphs).
+- [x] **5.** `boot.me` → `boot.typ` (numbered `.np` paragraphs). _Done: two independent
+  `+` numbered lists (12 + 5 items, each restarting at 1, matching the prose references);
+  tool names italic; «на самом себе» renders as Russian guillemets. Wired into `book.typ`;
+  renders correctly._
 - [ ] **6.** `load.me` → `load.typ` (largest body chapter; convert alone).
 - [ ] **7.** `as.me` + `emu.me` → `as.typ`, `emu.typ`.
 - [ ] **8.** `ccom.me` → `ccom.typ` (large; convert alone).

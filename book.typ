@@ -36,3 +36,4 @@
 // Chapters, in th.me order (more added as conversion proceeds).
 #include "results.typ"
 #include "intro.typ"
+#include "boot.typ"
