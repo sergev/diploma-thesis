@@ -6,7 +6,7 @@
 //
 // Conventions used by the converted *.man → *.typ files:
 //   .TH N S            → #man-page("N", S)        tool-page title (own page, in TOC)
-//   .SH "T"            → #man-section("T")         bold run-in header (ИМЯ, ФОРМАТ, …)
+//   .SH "T"            → #man-section("T")[ … ]    bold header + indented section body
 //   .PP / .LP          → blank line (paragraph)
 //   .IP "key" w        → term list `/ key: desc`   (escape \* \< \> in the key)
 //   .ES L … .EE        → ```c fenced block         (Russian comments OK; #, <> literal)
@@ -20,8 +20,12 @@
   heading(level: 2, numbering: none, outlined: true)[#name\(#section\)]
 }
 
-// .SH title — bold run-in section header. Deliberately NOT a heading, so it gets
-// neither a number nor a TOC entry (matching the original .SH).
-#let man-section(title) = block(above: 1.1em, below: 0.55em, breakable: false)[
-  #strong(title)
-]
+// Indent of a section body relative to its header (the original .SH did `.ba 0.5i`).
+#let man-indent = 5em
+
+// .SH title — bold run-in header (NOT a heading, so no number/TOC entry) followed by
+// the section body, indented under the header in the classic man-page style.
+#let man-section(title, body) = {
+  block(above: 1.1em, below: 0.55em, breakable: false)[#strong(title)]
+  pad(left: man-indent)[#body]
+}
