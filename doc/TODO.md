@@ -126,10 +126,15 @@ changes. After each task, `typst compile book.typ` must succeed.
   (`fill: none` + a row-0 text reset). Matches the original. **Phase C complete.**_
 
 ## Phase D — Finish
-- [ ] **16. Assemble & verify** — set the `#include` order in `book.typ` to match
-  `th.me`, enable `#tableofcontents`, cross-check chapter/appendix completeness against
-  `th.me` / `apply.me`, run a full `typst compile`, then fix overflow/font/spacing
-  issues by visual review against a `groff -me -t th.me` reference render.
+- [x] **16. Assemble & verify** — set `book.typ` include order to match `th.me`, enable
+  the table of contents, cross-check completeness against `th.me` / `apply.me`, full
+  compile + visual review. _Done: include order already matched (all 9 chapters + 13
+  appendix files). Enabled the TOC via a direct `outline(title: [Содержание])` (bookly
+  ships only en/fr i18n → bookly's `#tableofcontents` would title it in French). Verified
+  the full 56-page render: «Содержание» lists everything in order with page numbers +
+  leaders; title page, chapters, appendices (red section headers, indented bodies),
+  grammar, and pict tables render with no overflow/tofu. (A `groff` reference compare
+  isn't viable — it mojibakes the UTF-8 Cyrillic.) **Conversion complete.**_
 
 ## Verification
 - **Per task:** `typst compile book.typ` succeeds with no errors; spot-check the

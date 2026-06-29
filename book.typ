@@ -30,8 +30,12 @@
 #show: main-matter
 #set page(paper: "a4")
 
-// TODO Task 16: enable table of contents
-// #tableofcontents
+// Table of contents (own `outline` call with a Russian title — bookly only
+// ships en/fr i18n and would otherwise label it in French for lang: ru).
+#{
+  set outline.entry(fill: box(width: 1fr, repeat(gap: 0.25em)[.]))
+  outline(title: [Содержание], indent: 1em)
+}
 
 // Chapters, in th.me order (more added as conversion proceeds).
 #include "results.typ"
