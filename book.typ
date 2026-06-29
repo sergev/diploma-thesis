@@ -33,7 +33,6 @@
 // TODO Task 16: enable table of contents
 // #tableofcontents
 
-// TODO Task 16: replace placeholder with real #include order per th.me
-= Черновик
-
-TODO
+// Chapters, in th.me order (more added as conversion proceeds).
+#include "results.typ"
+#include "intro.typ"

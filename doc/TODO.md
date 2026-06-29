@@ -61,7 +61,10 @@ changes. After each task, `typst compile book.typ` must succeed.
   comments — highlighted, clean, no tofu._
 
 ## Phase B — Body chapters (th.me order)
-- [ ] **4.** `results.me` + `intro.me` → `results.typ`, `intro.typ`.
+- [x] **4.** `results.me` + `intro.me` → `results.typ`, `intro.typ`. _Done: bold lead-ins
+  (`*…*`), `.-` → bullet lists, tool names italic (`_nm_`…); wired into `book.typ` as
+  `#include`s (replacing the `= Черновик` placeholder). Both chapters render correctly,
+  Cyrillic crisp._
 - [ ] **5.** `boot.me` → `boot.typ` (numbered `.np` paragraphs).
 - [ ] **6.** `load.me` → `load.typ` (largest body chapter; convert alone).
 - [ ] **7.** `as.me` + `emu.me` → `as.typ`, `emu.typ`.
