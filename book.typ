@@ -17,6 +17,9 @@
   it,
 )
 
+// Don't insert blank pages to force each chapter onto a recto — start on the next page.
+#show pagebreak.where(to: "odd"): pagebreak(weak: true)
+
 #show: book.with(
   title: "Разработка переносимой Си-ориентированной инструментальной системы программирования для ЭВМ Эльбрус-Б",
   author: "Вакуленко С. В.",
