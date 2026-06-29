@@ -113,8 +113,11 @@ changes. After each task, `typst compile book.typ` must succeed.
   `*`/`|` literal); emu's ~14 debugger keys escape `<`→`\<` `>`→`\>`; strip's `/tmp/s??????`
   literal; show's multiple letter term-lists. All render correctly. **All 11 man pages
   done.**_
-- [ ] **14.** `syntax.me` → formal grammar appendix (no-fill / no-hyphenation rules →
-  raw or tight blocks).
+- [x] **14.** `syntax.me` → formal grammar appendix (no-fill / no-hyphenation rules →
+  raw or tight blocks). _Done: `syntax.typ` — unnumbered TOC heading; notation legend as a
+  term list with monospace symbol keys; the ~62-production BNF as one monospace code block
+  (every metacharacter / quoted terminal / `"\""` exact, source line breaks preserved → no
+  overflow); the `.[` examples as code blocks; prose `"#"`→`"\#"`. Renders correctly._
 - [ ] **15.** `pict.tbl` → Typst `#table()`s (object-file & archive structure diagrams +
   captions).
 

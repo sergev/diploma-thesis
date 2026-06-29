@@ -20,3 +20,4 @@
 #include "show.typ"
 #include "as-man.typ"
 #include "emu-man.typ"
+#include "syntax.typ"
