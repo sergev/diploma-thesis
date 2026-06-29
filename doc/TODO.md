@@ -74,7 +74,9 @@ changes. After each task, `typst compile book.typ` must succeed.
   `.=`/`.-` (`.ba` indent) → Typst nested bullet lists (file-structure & library-file
   lists); tool names italic. Wired into `book.typ`; all subsections render correctly,
   nesting + numbering verified._
-- [ ] **7.** `as.me` + `emu.me` → `as.typ`, `emu.typ`.
+- [x] **7.** `as.me` + `emu.me` → `as.typ`, `emu.typ`. _Done: prose + one numbered list
+  each (7 and 5 items); `\fIutc\fR` → italic. Wired into `book.typ`; both render
+  correctly._
 - [ ] **8.** `ccom.me` → `ccom.typ` (large; convert alone).
 - [ ] **9.** `concl.me` + `refer.me` → `concl.typ`, `refer.typ` (bibliography as a
   numbered list).

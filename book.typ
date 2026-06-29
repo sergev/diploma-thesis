@@ -38,3 +38,5 @@
 #include "intro.typ"
 #include "boot.typ"
 #include "load.typ"
+#include "as.typ"
+#include "emu.typ"
