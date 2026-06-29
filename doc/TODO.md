@@ -77,7 +77,11 @@ changes. After each task, `typst compile book.typ` must succeed.
 - [x] **7.** `as.me` + `emu.me` → `as.typ`, `emu.typ`. _Done: prose + one numbered list
   each (7 and 5 items); `\fIutc\fR` → italic. Wired into `book.typ`; both render
   correctly._
-- [ ] **8.** `ccom.me` → `ccom.typ` (large; convert alone).
+- [x] **8.** `ccom.me` → `ccom.typ` (large; convert alone). _Done: 7 `==` subsections;
+  numbered/bullet lists; register section kept as `.pp` paragraphs; new `.(l` no-fill
+  display → `#pad` indented block. Escaping handled: `#`→`\#` (directive list), `*`→`\*`
+  (`int *`, `char *`, «*&»). Heavy inline C-type italics. Clean compile validates
+  escaping; all rendered correctly._
 - [ ] **9.** `concl.me` + `refer.me` → `concl.typ`, `refer.typ` (bibliography as a
   numbered list).
 

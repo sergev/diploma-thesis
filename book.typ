@@ -40,3 +40,4 @@
 #include "load.typ"
 #include "as.typ"
 #include "emu.typ"
+#include "ccom.typ"
