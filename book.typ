@@ -37,3 +37,4 @@
 #include "results.typ"
 #include "intro.typ"
 #include "boot.typ"
+#include "load.typ"

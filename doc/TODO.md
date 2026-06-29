@@ -69,7 +69,11 @@ changes. After each task, `typst compile book.typ` must succeed.
   `+` numbered lists (12 + 5 items, each restarting at 1, matching the prose references);
   tool names italic; «на самом себе» renders as Russian guillemets. Wired into `book.typ`;
   renders correctly._
-- [ ] **6.** `load.me` → `load.typ` (largest body chapter; convert alone).
+- [x] **6.** `load.me` → `load.typ` (largest body chapter; convert alone). _Done: 7
+  `==` subsections; `.np` → numbered lists (Загрузчик's blocks restart at 1); new pattern
+  `.=`/`.-` (`.ba` indent) → Typst nested bullet lists (file-structure & library-file
+  lists); tool names italic. Wired into `book.typ`; all subsections render correctly,
+  nesting + numbering verified._
 - [ ] **7.** `as.me` + `emu.me` → `as.typ`, `emu.typ`.
 - [ ] **8.** `ccom.me` → `ccom.typ` (large; convert alone).
 - [ ] **9.** `concl.me` + `refer.me` → `concl.typ`, `refer.typ` (bibliography as a
