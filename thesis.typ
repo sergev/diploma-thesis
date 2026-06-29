@@ -50,7 +50,26 @@
 #include "ccom.typ"
 #include "concl.typ"
 #include "refer.typ"
-#include "apply.typ"
+
+// Appendices: the «Приложения» divider (unnumbered, like each tool page) followed by
+// the man pages, the formal grammar, and the structure-diagram tables.
+#set heading(numbering: none)
+
+= Приложения
+
+#include "aout.typ"
+#include "arh.typ"
+#include "ld.typ"
+#include "ar.typ"
+#include "nm.typ"
+#include "lorder.typ"
+#include "size.typ"
+#include "strip.typ"
+#include "show.typ"
+#include "as-man.typ"
+#include "emu-man.typ"
+#include "syntax.typ"
+#include "pict.typ"
 
 // Advisor's review (отзыв) — standalone final page.
 #include "review.typ"

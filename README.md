@@ -76,7 +76,7 @@ each program. The document was converted from its original troff/`-me` form to T
 | `thesis.typ` | Master document — template setup, table of contents, and the `#include` order |
 | `title-page.typ` | The Soviet title page |
 | `results.typ` … `refer.typ` | The nine thesis chapters (Russian) |
-| `apply.typ` + tool `*.typ` | «Приложения»: man pages for `ld`, `ar`, `as`, `emu`, …, via the `man.typ` helper |
+| tool `*.typ` + `man.typ` | «Приложения»: man pages for `ld`, `ar`, `as`, `emu`, …, built with the `man.typ` helper |
 | `syntax.typ`, `pict.typ` | Formal input-language grammar; object-file layout diagrams |
 | `review.typ` | The advisor's review (отзыв), final page |
 | `Makefile`, `CLAUDE.md` | Typst build rules; working guidance |

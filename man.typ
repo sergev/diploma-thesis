@@ -2,7 +2,7 @@
 // `.man` macros (apply.me redefines .TH/.SH/.PP/.IP/.ES/.EE on top of -me).
 //
 // Each converted *.man → *.typ file must start with:  #import "man.typ": *
-// (an #include does NOT inherit apply.typ's import).
+// (an #include does NOT inherit the parent's imports).
 //
 // Conventions used by the converted *.man → *.typ files:
 //   .TH N S            → #man-page("N", S)        tool-page title (own page, in TOC)

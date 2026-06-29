@@ -36,7 +36,7 @@ emits the «Содержание» table of contents, and `#include`s the conten
 - **Title page** — `title-page.typ` (the Soviet title page, from the original `title.nr`).
 - **Chapters** (original `th.me` order): `results.typ`, `intro.typ`, `boot.typ`,
   `load.typ`, `as.typ`, `emu.typ`, `ccom.typ`, `concl.typ`, `refer.typ`.
-- **Appendices** — `apply.typ` opens the unnumbered «Приложения» section and `#include`s
+- **Appendices** — `thesis.typ` opens the unnumbered «Приложения» section and `#include`s
   the tool man pages (`aout`, `arh`, `ld`, `ar`, `nm`, `lorder`, `size`, `strip`, `show`,
   `as-man`, `emu-man`), the formal grammar (`syntax.typ`), and the object-file structure
   diagrams (`pict.typ`).
@@ -48,8 +48,8 @@ emits the «Содержание» table of contents, and `#include`s the conten
 - All prose is Russian and UTF-8; preserve the text verbatim (including original typos
   unless explicitly asked to fix them).
 - Chapter and appendix files contain plain Typst markup and are `#include`d from
-  `thesis.typ` / `apply.typ`. Files that use the man-page helpers or explicit headings start
-  with `#import "man.typ": *`.
+  `thesis.typ`. Files that use the man-page helpers or explicit headings start with
+  `#import "man.typ": *`.
 - `man.typ` provides the man-page helpers: `man-page(name, section)` (a tool-page title —
   unnumbered level-2 heading, own page, in the TOC) and `man-section(title)[body]` (a
   coloured run-in section header with its body indented).
